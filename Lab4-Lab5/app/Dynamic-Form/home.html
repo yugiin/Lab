@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="vendor/jquery-ui-1.12.1.custom/jquery-ui.css">
+    <link rel="stylesheet" href="vendor/bootstrap-4/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="vendor/bootstrap-4/css/bootstrap.css">
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class=" btn btn-primary" href="../index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+<div class="site">
+    <h1>Ticket Desc</h1>
+    <div class="alert alert-danger hide" id="error"></div>
+    <form action="/" method="post" id="tickets-desc">
+        <fieldset id="points" class="section collapse show collapse-section-1 collapse-section-1-1 collapse-section-1-2">
+            <legend>Direction</legend>
+            <div class="row">
+                <div class="form-line col-md-6">
+                    <label for="inp-from">From: <span class="badge badge-warning">required</span></label>
+                    <input type="text" class="form-control inp-with-content" placeholder="Start Point : Kyiv" data-label="From" id="inp-from" name="inp-from" data-content=".tbl-from" required>
+                </div>
+                <div class="form-line col-md-6">
+                    <label for="inp-to">To: <span class="badge badge-warning">required</span></label>
+                    <input type="text" class="form-control inp-with-content" placeholder="Destination: London" data-label="To" id="inp-to" name="inp-to" data-content=".tbl-to" required>
+                </div>
+            </div>
+            <div class="form-line">
+                <label for="inp-date">Date: <span class="badge badge-warning">required</span></label>
+                <input type="date" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" placeholder="MM/DD/YYYY" id="inp-date" class="form-control inp-with-content" name="inp-date" data-label="Date" data-content=".tbl-date" required>
+            </div>
+            <div class="form-line">
+                <input disabled type="button" name="point-search" value="Search" class="btn btn-primary base-disabled"  data-toggle="collapse" data-target=".collapse-section-1" aria-expanded="false"  aria-controls="type trains-list">
+            </div>
+        </fieldset>
+
+        <fieldset id="trains-list" class="section collapse collapse-section-1 collapse-section-2 collapse-section-2-1">
+            <legend>
+                Available Trains
+            </legend>
+
+            <div class="form-line clearfix">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="regalies">
+                            From <span class="alert alert-primary tbl-from"></span>
+                            To <span class="alert alert-primary tbl-to"></span>
+                            Date:<span class="alert alert-primary tbl-date"></span>
+                        </span>
+                        <input type="button" name="point-search" value="Change Date or Destinations" class="btn btn-link btn-back"  data-toggle="collapse" data-target=".collapse-section-1" aria-expanded="false"  aria-controls="type trains-list" data-reset="#trains-list">
+                    </li>
+                </ul>
+            </div>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Train #</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>10:15</td>
+                    <td>
+                        <span role="button" data-toggle="collapse" data-target=".collapse-section-2" aria-expanded="false"  aria-controls="trains-list type">
+                            <label class="btn-link">
+                                <input type="radio" data-number="MT-123" data-time="10:15" name="train-number" value="MT-123_10:15" class="train-number" required>
+                                MT-123
+                            </label>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>12:25</td>
+                    <td>
+                        <span role="button" data-toggle="collapse" data-target=".collapse-section-2" aria-expanded="false"  aria-controls="trains-list type">
+                            <label class="btn-link">
+                                <input type="radio" data-number="SD-165" data-time="12:25" name="train-number" value="SD-165_12:25" class="train-number" required>
+                                SD-165
+                            </label>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>22:15</td>
+                    <td>
+                        <span role="button" data-toggle="collapse" data-target=".collapse-section-2" aria-expanded="false"  aria-controls="trains-list type">
+                            <label class="btn-link">
+                                <input type="radio" data-number="DR-5234" data-time="22:15" name="train-number" value="DR-5234_22:15" class="train-number" required>
+                                DR-5234
+                            </label>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>15:15</td>
+                    <td>
+                        <span role="button" data-toggle="collapse" data-target=".collapse-section-2" aria-expanded="false"  aria-controls="trains-list type">
+                            <label class="btn-link">
+                                <input type="radio" data-number="GH-643" data-time="15:15" name="train-number" value="GH-643_15:15" class="train-number" required>
+                                GH-643
+                            </label>
+                        </span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </fieldset>
+
+        <fieldset id="type" class="section collapse collapse-section-1-1 collapse-section-2 collapse-section-3">
+            <legend>Track and Places</legend>
+
+            <div class="form-line clearfix">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="regalies">
+                            From <span class="alert alert-primary tbl-from"></span>
+                            To <span class="alert alert-primary tbl-to"></span>
+                            Date: <span class="alert alert-primary tbl-date"></span>
+                        </span>
+                        <input type="button" name="point-search" value="Change Date or Destinations" class="btn btn-link btn-back"  data-toggle="collapse" data-target=".collapse-section-1-1" aria-expanded="false"  aria-controls="type points" data-reset="#trains-list,#type">
+                    </li>
+                    <li class="list-group-item">
+                        <span class="regalies">
+                            Train <span class="alert alert-primary train-number-content"></span> at <span class="alert alert-primary train-time-content"></span>
+                        </span>
+                        <input type="button" class="btn btn-link btn-back" value="Select other Train"  data-toggle="collapse" data-target=".collapse-section-2" aria-expanded="false"  aria-controls="type trains-list" data-reset="#type">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="form-line">
+                <label for="inp-type">Select the train class: <span class="badge badge-warning">required</span></label>
+                <select class="form-control custom-select inp-with-content" name="type" id="inp-type" data-label="train class" data-content=".train-class-info" required>
+                    <option value="">--</option>
+                    <option value="1">Business</option>
+                    <option value="2">Econom</option>
+                </select>
+            </div>
+            <div id="type-track-1" class="form-line type-track collapse">
+                <label for="inp-type-track-1">Select track number: <span class="badge badge-warning">required</span></label>
+                <select class="form-control custom-select inp-type-track" name="type-track-1" id="inp-type-track-1" data-label="track number" data-content=".info-track-number" required>
+                    <option value="">--</option>
+                    <option value="1" data-disabled="1,5,7">1</option>
+                    <option value="2" data-disabled="1,5,6,7">2</option>
+                    <option value="3" data-disabled="1,5,7,8">3</option>
+                    <option value="4" data-disabled="1,3,5,7">4</option>
+                    <option value="5" data-disabled="21,5,7">5</option>
+                </select>
+            </div>
+            <div id="type-track-2" class="form-line type-track collapse">
+                <label for="inp-type-track-2">Select track number: <span class="badge badge-warning">required</span></label>
+                <select class="form-control custom-select inp-type-track" name="type-track-2" id="inp-type-track-2" data-label="track number" data-content=".info-track-number" required>
+                    <option value="">--</option>
+                    <option value="1" data-disabled="1,5,27">1</option>
+                    <option value="2" data-disabled="21,5,7">2</option>
+                    <option value="3" data-disabled="1,5,7">3</option>
+                    <option value="4" data-disabled="1,25,7">4</option>
+                    <option value="5" data-disabled="1,5,8,7">5</option>
+                </select>
+            </div>
+
+            <fieldset id="type-1" class="train-type type-1 collapse">
+                <p class="description">Please select the place(s) <span class="badge badge-warning">required</span></p>
+                <div class="train row">
+                    <div class="col-2">
+                        <div class="room row">
+                            <label class="col-6 place" for="inp-place-1">1</label>
+                            <label class="col-6 place" for="inp-place-2">2</label>
+                            <label class="col-6 place" for="inp-place-3">3</label>
+                            <label class="col-6 place" for="inp-place-4">4</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="room row">
+                            <label class="col-6 place" for="inp-place-5">5</label>
+                            <label class="col-6 place" for="inp-place-6">6</label>
+                            <label class="col-6 place" for="inp-place-7">7</label>
+                            <label class="col-6 place" for="inp-place-8">8</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="room row">
+                            <label class="col-6 place" for="inp-place-9">9</label>
+                            <label class="col-6 place" for="inp-place-10">10</label>
+                            <label class="col-6 place" for="inp-place-11">11</label>
+                            <label class="col-6 place" for="inp-place-12">12</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="room row">
+                            <label class="col-6 place" for="inp-place-12">12</label>
+                            <label class="col-6 place" for="inp-place-14">14</label>
+                            <label class="col-6 place" for="inp-place-15">15</label>
+                            <label class="col-6 place" for="inp-place-16">16</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="room row">
+                            <label class="col-6 place" for="inp-place-17">17</label>
+                            <label class="col-6 place" for="inp-place-18">18</label>
+                            <label class="col-6 place" for="inp-place-19">19</label>
+                            <label class="col-6 place" for="inp-place-20">20</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="room row">
+                            <label class="col-6 place" for="inp-place-21">21</label>
+                            <label class="col-6 place" for="inp-place-22">22</label>
+                            <label class="col-6 place" for="inp-place-23">23</label>
+                            <label class="col-6 place" for="inp-place-24">24</label>
+                        </div>
+                    </div>
+                    <div class="flor col-12"></div>
+                </div>
+            </fieldset>
+            <fieldset id="type-2" class="train-type type-2 collapse">
+                <p class="description">Please select the place(s)</p>
+                <div class="train row">
+                    <div class="col-2">
+                        <div class="room row">
+                            <label class="col-6 place" for="inp-place-1">1</label>
+                            <label class="col-6 place" for="inp-place-2">2</label>
+                            <label class="col-6 place" for="inp-place-3">3</label>
+                            <label class="col-6 place" for="inp-place-4">4</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="room row">
+                            <label class="col-6 place" for="inp-place-5">5</label>
+                            <label class="col-6 place" for="inp-place-6">6</label>
+                            <label class="col-6 place" for="inp-place-7">7</label>
+                            <label class="col-6 place" for="inp-place-8">8</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="room row">
+                            <label class="col-6 place" for="inp-place-9">9</label>
+                            <label class="col-6 place" for="inp-place-10">10</label>
+                            <label class="col-6 place" for="inp-place-11">11</label>
+                            <label class="col-6 place" for="inp-place-12">12</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="room row">
+                            <label class="col-6 place" for="inp-place-13">13</label>
+                            <label class="col-6 place" for="inp-place-14">14</label>
+                            <label class="col-6 place" for="inp-place-15">15</label>
+                            <label class="col-6 place" for="inp-place-16">16</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="room row">
+                            <label class="col-6 place" for="inp-place-17">17</label>
+                            <label class="col-6 place" for="inp-place-18">18</label>
+                            <label class="col-6 place" for="inp-place-19">19</label>
+                            <label class="col-6 place" for="inp-place-20">20</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="room row">
+                            <label class="col-6 place" for="inp-place-21">21</label>
+                            <label class="col-6 place" for="inp-place-22">22</label>
+                            <label class="col-6 place" for="inp-place-23">23</label>
+                            <label class="col-6 place" for="inp-place-24">24</label>
+                        </div>
+                    </div>
+                    <div class="flor col-12"></div>
+                    <div class="col-2">
+                        <div class="room row">
+                            <label class="col-6 place" for="inp-place-25">25</label>
+                            <label class="col-6 place" for="inp-place-26">26</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="room row">
+                            <label class="col-6 place" for="inp-place-27">27</label>
+                            <label class="col-6 place" for="inp-place-28">28</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="room row">
+                            <label class="col-6 place" for="inp-place-29">29</label>
+                            <label class="col-6 place" for="inp-place-30">30</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="room row">
+                            <label class="col-6 place" for="inp-place-31">31</label>
+                            <label class="col-6 place" for="inp-place-32">32</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="room row">
+                            <label class="col-6 place" for="inp-place-33">33</label>
+                            <label class="col-6 place" for="inp-place-34">34</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="room row">
+                            <label class="col-6 place" for="inp-place-35">35</label>
+                            <label class="col-6 place" for="inp-place-36">36</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div id="places" class="places visualyhidden" data-content=".info-place">
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-1" value="1" name="inp-place[]" required data-label="Place"><!---1-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-2" value="2" name="inp-place[]" required data-label="Place"><!---2-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-3" value="3" name="inp-place[]" required data-label="Place"><!---3-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-4" value="4" name="inp-place[]" required data-label="Place"><!---4-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-5" value="5" name="inp-place[]" required data-label="Place"><!---5-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-6" value="6" name="inp-place[]" required data-label="Place"><!---6-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-7" value="7" name="inp-place[]" required data-label="Place"><!---7-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-8" value="8" name="inp-place[]" required data-label="Place"><!---8-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-9" value="9" name="inp-place[]" required data-label="Place"><!---9-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-10" value="10" name="inp-place[]" required data-label="Place"><!---10-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-11" value="11" name="inp-place[]" required data-label="Place"><!---11-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-12" value="12" name="inp-place[]" required data-label="Place"><!---12-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-13" value="13" name="inp-place[]" required data-label="Place"><!---13-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-14" value="14" name="inp-place[]" required data-label="Place"><!---14-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-15" value="15" name="inp-place[]" required data-label="Place"><!---15-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-16" value="16" name="inp-place[]" required data-label="Place"><!---16-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-17" value="17" name="inp-place[]" required data-label="Place"><!---17-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-18" value="18" name="inp-place[]" required data-label="Place"><!---18-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-19" value="19" name="inp-place[]" required data-label="Place"><!---19-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-20" value="20" name="inp-place[]" required data-label="Place"><!---20-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-21" value="21" name="inp-place[]" required data-label="Place"><!---21-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-22" value="22" name="inp-place[]" required data-label="Place"><!---22-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-23" value="23" name="inp-place[]" required data-label="Place"><!---23-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-24" value="24" name="inp-place[]" required data-label="Place"><!---24-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-25" value="25" name="inp-place[]" required data-label="Place"><!---25-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-26" value="26" name="inp-place[]" required data-label="Place"><!---26-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-27" value="27" name="inp-place[]" required data-label="Place"><!---27-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-28" value="28" name="inp-place[]" required data-label="Place"><!---28-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-29" value="29" name="inp-place[]" required data-label="Place"><!---29-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-30" value="30" name="inp-place[]" required data-label="Place"><!---30-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-31" value="31" name="inp-place[]" required data-label="Place"><!---31-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-32" value="32" name="inp-place[]" required data-label="Place"><!---32-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-33" value="33" name="inp-place[]" required data-label="Place"><!---33-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-34" value="34" name="inp-place[]" required data-label="Place"><!---34-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-35" value="35" name="inp-place[]" required data-label="Place"><!---35-->
+                <input type="checkbox" class="inp-place form-check-input inp-required-one-of" id="inp-place-36" value="36" name="inp-place[]" required data-label="Place"><!---36-->
+            </div>
+
+            <div class="form-line">
+                <input disabled type="button" value="Done" class="btn btn-primary base-disabled" data-toggle="collapse" data-target=".collapse-section-3" aria-expanded="false"  aria-controls="type options submit" >
+            </div>
+        </fieldset>
+
+        <fieldset id="options" class="section collapse collapse-section-1-2 collapse-section-2-1 collapse-section-3">
+            <legend>Select additional options</legend>
+
+            <div class="form-line clearfix">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="regalies">
+                            From <span class="alert alert-primary tbl-from"></span>
+                            To <span class="alert alert-primary tbl-to"></span>
+                            Date: <span class="alert alert-primary tbl-date"></span>
+                        </span>
+                        <input type="button" name="point-search" value="Change Date or Destinations" class="btn btn-link btn-back"  data-toggle="collapse" data-target=".collapse-section-1-2" aria-expanded="false"  aria-controls="type points" data-reset="#trains-list,#type,#options">
+                    </li>
+                    <li class="list-group-item">
+                        <span class="regalies">
+                            Train <span class="alert alert-primary train-number-content"></span> at <span class="alert alert-primary train-time-content"></span>
+                        </span>
+                        <input type="button" class="btn btn-link btn-back" value="Select other Train"  data-toggle="collapse" data-target=".collapse-section-2-1" aria-expanded="false"  aria-controls="type trains-list" data-reset="#type,#options">
+                    </li>
+                    <li class="list-group-item">
+                        <span class="regalies">
+                            Class: <span class="alert alert-primary train-class-info"></span>
+                            Track #: <span class="alert alert-primary info-track-number"></span>
+                            Place(s): <span class="alert alert-primary info-place"></span>
+                        </span>
+                        <input type="button" class="btn btn-link btn-back" value="Select other Places"  data-toggle="collapse" data-target=".collapse-section-3" aria-expanded="false"  aria-controls="type options submit" data-reset="#options">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="form-line">
+                <div class="row">
+                    <label class="col-md-6 form-check-label">
+                        <input type="checkbox" class="form-check-input" name="inp-opt1" value="opt1">
+                        <span>Sigare</span>
+                    </label>
+                    <label class="col-md-6 form-check-label">
+                        <input type="checkbox" class="form-check-input" name="inp-opt2" value="opt2">
+                        <span>Wiskey</span>
+                    </label>
+                </div>
+                <div class="row">
+                    <label class="col-md-6 form-check-label">
+                        <input type="checkbox" class="form-check-input" name="inp-opt3" value="opt3">
+                        <span>Rom</span>
+                    </label>
+                    <label class="col-md-6 form-check-label">
+                        <input type="checkbox" class="form-check-input" name="inp-opt4" value="opt4">
+                        <span>Girl</span>
+                    </label>
+                </div>
+                <div class="row">
+                    <label class="col-md-6 form-check-label">
+                        <input type="checkbox" class="form-check-input" name="inp-opt5" value="opt5">
+                        <span>Casino</span>
+                    </label>
+                    <label class="col-md-6 form-check-label">
+                        <input type="checkbox" class="form-check-input" name="inp-opt6" value="opt6">
+                        <span>Playing Cards</span>
+                    </label>
+                </div>
+                <div class="row">
+                    <label class="col-md-6 form-check-label">
+                        <input type="checkbox" class="form-check-input inp-use-required" name="inp-delivery" id="inp-delivery" value="1" data-use-required="#inp-city,#inp-street,#inp-floor-room" data-collapse-relative="#delivery">
+                        <span>Tickets Delivery</span>
+                    </label>
+                </div>
+            </div>
+
+            <fieldset id="delivery" class="collapse">
+                <legend>Delivery Address</legend>
+                <div class="row form-line">
+                    <label for="inp-city">City: <span class="badge badge-warning">required</span></label>
+                    <input type="text" class="form-control" data-label="City" name="inp-city" id="inp-city">
+                </div>
+                <div class="row form-line">
+                    <label for="inp-street">Street: <span class="badge badge-warning">required</span></label>
+                    <input type="text" class="form-control" data-label="Street" name="inp-street" id="inp-street">
+                </div>
+                <div class="row form-line">
+                    <label for="inp-city">Floor, Room: <span class="badge badge-warning">required</span></label>
+                    <input type="text" class="form-control" data-label="Floor, Room" name="inp-floor-room" id="inp-floor-room">
+                </div>
+            </fieldset>
+
+            <div id="submit" class=""><!--collapse collapse-section-1-2 collapse-section-2-1 collapse-section-3-->
+                <input type="submit" name="order" value="Order" class="btn btn-primary">
+            </div>
+        </fieldset>
+    </form>
+</div>
+ <footer class="navbar navbar-inverse">
+      <div class="container">
+        <div class="row">
+          <p class="col-xs-12 text-center copyright">Yuriy Nazarenko &copy; 2017 IK-41з</p>   
+        </div>
+      </div>
+    </footer>
+
+<script src="vendor/jquery.v3.1.2.js"></script>
+<script src="vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script src="vendor/popper.js"></script>
+<script src="vendor/bootstrap-4/js/bootstrap.js"></script>
+<script src="js/js.js"></script>
+</body>
+</html>

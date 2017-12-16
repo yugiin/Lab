@@ -1,0 +1,236 @@
+// Variables
+@brand-color: #1a75ba;
+
+
+// Mixines 
+.no-list{
+	margin:0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.translate (@x, @y:0) {
+	-webkit-transform:   translate(@x, @y);
+	-moz-transform: 	 translate(@x, @y);
+	-ms-transform: 		 translate(@x, @y);
+	-o-transform: 		 translate(@x, @y);
+}
+
+.gradient (@startColor: #eee, @endColor: white) {
+	background-color: @startColor;
+	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+	background: -webkit-linear-gradient(top, @startColor, @endColor);
+	background: -moz-linear-gradient(top, @startColor, @endColor);
+	background: -ms-linear-gradient(top, @startColor, @endColor);
+	background: -o-linear-gradient(top, @startColor, @endColor);
+	background: linear-gradient(top, @startColor, @endColor);
+}
+
+.border-radius (@radius:0) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+}
+
+.box-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0,@color:rgba(0,0,0, 0.25)) {
+	-webkit-box-shadow:  @x @y @blur @spread @color;
+	-moz-box-shadow:     @x @y @blur @spread @color;
+	box-shadow:          @x @y @blur @spread @color;
+}
+
+body,html{
+	min-height:100%;
+	
+}
+body{
+	.gradient(#fdfbfb,#ebedee);
+}
+ul{
+	.no-list;
+}
+
+
+
+.btn:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.navbar{
+	.border-radius(0);
+   .box-shadow(0,2px,2px,@color:rgba(0,0,0,.15));
+   padding:10px 0;
+}
+
+.navbar-default{
+	.navbar-nav{
+		>li{
+			margin-right: 5px;
+		}
+	}
+	.navbar-btn:hover,
+	.navbar-nav > .active > a, 
+	.navbar-nav > .active > a:hover,
+	.navbar-nav > li > a:hover{
+		background-color: @brand-color;
+		.border-radius(10px);
+		color:#fff;
+	}
+	.navbar-btn, .navbar-nav > li > a{
+		color: @brand-color;
+		padding: 10px;
+		margin: 0;
+	}
+	.navbar-btn:hover{
+		border-color:@brand-color;
+	}
+}
+
+.banner-container{
+	margin-top: 40px;
+	padding-top: 20px;
+	height: 320px;
+	background: url('../img/banner_bg.jpg') no-repeat center/cover;
+	text-align: center;
+	position: relative;
+}
+
+.banner{
+	color:@brand-color;
+	background: #fff;
+	padding: 20px 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	.translate(-50%,-50%);
+	h2,h3{
+		font-size: 45px;
+		text-transform: uppercase;
+		margin: 0;
+	}
+}
+
+
+.carousel{
+	padding: 0;
+	text-align: center;
+	margin-bottom: 30px;
+	img{
+		display: inline-block !important;
+	}
+	&-container{
+		padding-top: 15px;
+	}
+}
+
+.carousel-control.right,
+.carousel-control.left{
+	color:#1a75ba;
+	background-image: none;
+}
+
+.flag{
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.flag img{
+	display: inline-block;
+	width: 100%;
+	max-width: 450px;
+	opacity: 0.7;
+	transition: all .3s ease;
+	cursor: pointer;
+	position: relative;
+	z-index: 500;
+}
+
+.flag img:hover{
+	opacity: 1;
+}
+
+
+.pagination{
+	margin-left: 15px;
+	a{
+		display: inline-block;
+	    padding: 6px 12px;
+	    line-height: 1.42857143;
+	    color: #337ab7;
+	    text-decoration: none;
+	    margin-left: -1px;
+	    background-color: #fff;
+	    border: 1px solid #ddd;	
+	    cursor: pointer;
+	    &:hover,&.jp-current{
+			color: #23527c;
+			background-color: #eee;
+			border-color: #ddd;	    	
+	    }
+	}
+}
+
+.modal-descr{
+	margin-top: 15px;
+}
+
+.about{
+	padding: 15px 0;
+	  .box-shadow(0,-2px,2px,@color:rgba(0,0,0,.15));
+	background: url('../img/designer_bg.jpg') repeat center/cover;
+	h2{
+		color:@brand-color;
+	}
+}
+
+.skills li{
+	position:relative;
+	padding-left: 15px;
+}
+
+.skills li:before{
+	content: "";
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: @brand-color;
+	position: absolute;
+	top: 7px;
+	left: 0;
+}
+
+footer{
+	&.navbar-inverse{
+		.gradient(#141e30 ,#243b55);
+		margin-bottom: 0;
+	}
+
+	.copyright{
+		color:#fff;
+		margin:0;
+		padding: 10px 0;
+	}
+}
+
+.form-control-feedback{
+	right: 10px;
+}
+
+

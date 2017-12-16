@@ -1,0 +1,708 @@
+/**
+    Created by Alexander Nykonenko (Nyko13),
+    member of UG developer team.
+    (http://ug-dev-team.com)
+    14.12.2017 13:23:09
+**/
+/**
+## Tags
+styles for default html tags and similar classes
+*/
+body,html{
+    background-color: #eeeeee;
+}
+/**
+## helpers
+*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/**
+## common
+universal classes what can be used every where on site
+*/
+/*
+    indentations
+*/
+
+/*
+    links and buttons
+*/
+
+/*
+    texts
+*/
+
+/*
+    lists
+*/
+.list-line {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-line > li {
+    display: inline-block;
+}
+
+/*
+    blocks
+*/
+.col {
+    position: relative;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.col-1 {
+    width: 8.333333333%;
+}
+
+.col-2 {
+    width: 16.666666667%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.333333333%;
+}
+
+.col-5 {
+    width: 41.666666667%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.333333333%;
+}
+
+.col-8 {
+    width: 66.666666667%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.333333333%;
+}
+
+.col-11 {
+    width: 91.666666667%;
+}
+
+.col-12 {
+    width: 100%;
+}
+/** train */
+.train{
+    border:1px solid #666;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    padding: 0 15px;
+}
+.train .room{
+    border-left:1px solid #666;
+    border-right:1px solid #666;
+    padding: 1px !important;
+}
+.train .place{
+    font-size: 14px;
+    line-height: 1.5em;
+    vertical-align: middle;
+    text-align: center;
+    color: #444444;
+    background-color: #E5FFE8;
+    display: block;
+    padding: 0 !important;
+    border:1px solid #fff;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+.train .place.reserved{
+    background-color: #b5b5b5;
+    color: #ccc
+}
+.train .flor{
+    border-top:1px dashed #666;
+    border-bottom:1px dashed #666;
+    margin: -1px 0;
+    min-height: 15px;
+    text-align: center;
+}
+.train .flor:before{
+    content: 'Flor';
+    color: #ccc;
+    font-style: italic;
+    font-size: 11px;
+    line-height: 15px;
+    vertical-align: middle;
+}
+#type .places{
+    width: 1px;
+    height: 1px;
+    position: fixed;
+    z-index: -1;
+    left: -1px;
+    top: -1px;
+    overflow: hidden;
+}
+.list-group{
+    float: right;
+    margin-top: -15px;
+}
+.list-group-item{
+    padding: 0 15px;
+    text-align: right;
+}
+.train-type{
+    padding: 15px;
+    border:1px solid #ddd;
+    margin-bottom: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+.train-type > .row{
+    margin: 0;
+}
+.train-type .place.dis-l{
+    background-color: #f0f0f0;
+    cursor: default;
+}
+.train-type .place.act-ive{
+    background-color: #92d096;
+}
+#options{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#delivery{
+    margin-top: 30px;
+}
+.regalies {
+    display: block;
+    float: left;
+    font-size: 12px;
+    padding: 10px 10px 10px 0;
+}
+#error.hide{
+    display: none;
+}
+#error.show{
+    display: block;
+}
+/*
+    forms
+*/
+fieldset.section{
+    margin-bottom: 2em;
+}
+label,
+.btn{
+    cursor: pointer;
+}
+.form-line{
+    margin-bottom: 15px;
+}
+/*legend */.alert{
+    padding: 5px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+input.train-number{
+    opacity:0;
+}
+:not(output):-moz-ui-invalid{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+/*
+    tables
+*/
+#trains-list table{
+    width: 100%;
+}
+#trains-list table label{
+    margin: 0;
+}
+#trains-list table tr:nth-child(even){
+    background-color: #f0f0f0;
+}
+#trains-list table th,
+#trains-list table td{
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    padding: 10px 15px;
+}
+#trains-list legend .item{
+    display: block;
+}
+/**
+## elements
+styles for different blocks and elements on site
+*/
+/*
+    structure
+    styles for main page construction
+*/
+.site{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.section{
+    padding: 15px;
+    background-color: #fff;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    -webkit-box-shadow:  0 0 15px rgba(0,0,0,0.5);
+    -moz-box-shadow:  0 0 15px rgba(0,0,0,0.5);
+    box-shadow:  0 0 15px rgba(0,0,0,0.5);
+    margin-top: 15px;
+}
+.section legend{
+    background-color: #fff;
+    display: inline-block;
+    padding: 10px 25px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border-top:1px solid #ccc;
+    width: auto;
+}
+/*
+    other
+*/
+
+/**
+## Media queries
+mobile first structure
+**/
+@media only screen and (min-width: 500px) {
+    /**
+    ## sm Tags
+    styles for default html tags and similar classes
+    */
+    /*
+        sm indentations
+    */
+    /*
+        sm links and buttons
+    */
+    /*
+        sm texts
+    */
+    /*
+        sm lists
+    */
+    /*
+        sm blocks
+    */
+    .col-sm {
+        float: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .col-sm-1 {
+        width: 8.333333333%;
+    }
+
+    .col-sm-2 {
+        width: 16.666666667%;
+    }
+
+    .col-sm-3 {
+        width: 25%;
+    }
+
+    .col-sm-4 {
+        width: 33.333333333%;
+    }
+
+    .col-sm-5 {
+        width: 41.666666667%;
+    }
+
+    .col-sm-6 {
+        width: 50%;
+    }
+
+    .col-sm-7 {
+        width: 58.333333333%;
+    }
+
+    .col-sm-8 {
+        width: 66.666666667%;
+    }
+
+    .col-sm-9 {
+        width: 75%;
+    }
+
+    .col-sm-10 {
+        width: 83.333333333%;
+    }
+
+    .col-sm-11 {
+        width: 91.666666667%;
+    }
+
+    .col-sm-12 {
+        width: 100%;
+    }
+
+    /*
+        sm forms
+    */
+    /*
+        sm tables
+    */
+    /**
+    ## sm elements
+    styles for different blocks and elements on site
+    */
+    /*
+        sm structure
+        styles for main page construction
+    */
+    /*
+        sm other
+    */
+}
+
+@media only screen and (min-width: 768px) {
+    /**
+    ## md Tags
+    styles for default html tags and similar classes
+    */
+    /*
+        md indentations
+    */
+    /*
+        md links and buttons
+    */
+    /*
+        md texts
+    */
+    /*
+        md lists
+    */
+    /*
+        md blocks
+    */
+    .col-md {
+        float: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .col-md-1 {
+        width: 8.333333333%;
+    }
+
+    .col-md-2 {
+        width: 16.666666667%;
+    }
+
+    .col-md-3 {
+        width: 25%;
+    }
+
+    .col-md-4 {
+        width: 33.333333333%;
+    }
+
+    .col-md-5 {
+        width: 41.666666667%;
+    }
+
+    .col-md-6 {
+        width: 50%;
+    }
+
+    .col-md-7 {
+        width: 58.333333333%;
+    }
+
+    .col-md-8 {
+        width: 66.666666667%;
+    }
+
+    .col-md-9 {
+        width: 75%;
+    }
+
+    .col-md-10 {
+        width: 83.333333333%;
+    }
+
+    .col-md-11 {
+        width: 91.666666667%;
+    }
+
+    .col-md-12 {
+        width: 100%;
+    }
+
+    /*
+        md forms
+    */
+    /*
+        md tables
+    */
+    /**
+    ## md elements
+    styles for different blocks and elements on site
+    */
+    /*
+        md structure
+        styles for main page construction
+    */
+    /*
+        md other
+    */
+}
+
+@media only screen and (min-width: 1025px) {
+    /**
+    ## lg Tags
+    styles for default html tags and similar classes
+    */
+    /*
+        lg indentations
+    */
+    /*
+        lg links and buttons
+    */
+    /*
+        lg texts
+    */
+    /*
+        lg lists
+    */
+    /*
+        lg blocks
+    */
+    .col-lg {
+        float: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .col-lg-1 {
+        width: 8.333333333%;
+    }
+
+    .col-lg-2 {
+        width: 16.666666667%;
+    }
+
+    .col-lg-3 {
+        width: 25%;
+    }
+
+    .col-lg-4 {
+        width: 33.333333333%;
+    }
+
+    .col-lg-5 {
+        width: 41.666666667%;
+    }
+
+    .col-lg-6 {
+        width: 50%;
+    }
+
+    .col-lg-7 {
+        width: 58.333333333%;
+    }
+
+    .col-lg-8 {
+        width: 66.666666667%;
+    }
+
+    .col-lg-9 {
+        width: 75%;
+    }
+
+    .col-lg-10 {
+        width: 83.333333333%;
+    }
+
+    .col-lg-11 {
+        width: 91.666666667%;
+    }
+
+    .col-lg-12 {
+        width: 100%;
+    }
+
+    /*
+        lg forms
+    */
+    /*
+        lg tables
+    */
+    /**
+    ## lg elements
+    styles for different blocks and elements on site
+    */
+    /*
+        lg structure
+        styles for main page construction
+    */
+    /*
+        lg other
+    */
+}
+
+@media only screen and (min-width: 1260px) {
+    /**
+    ## xl Tags
+    styles for default html tags and similar classes
+    */
+    /*
+        xl indentations
+    */
+    /*
+        xl links and buttons
+    */
+    /*
+        xl texts
+    */
+    /*
+        xl lists
+    */
+    /*
+        xl blocks
+    */
+    .col-xl {
+        float: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .col-xl-1 {
+        width: 8.333333333%;
+    }
+
+    .col-xl-2 {
+        width: 16.666666667%;
+    }
+
+    .col-xl-3 {
+        width: 25%;
+    }
+
+    .col-xl-4 {
+        width: 33.333333333%;
+    }
+
+    .col-xl-5 {
+        width: 41.666666667%;
+    }
+
+    .col-xl-6 {
+        width: 50%;
+    }
+
+    .col-xl-7 {
+        width: 58.333333333%;
+    }
+
+    .col-xl-8 {
+        width: 66.666666667%;
+    }
+
+    .col-xl-9 {
+        width: 75%;
+    }
+
+    .col-xl-10 {
+        width: 83.333333333%;
+    }
+
+    .col-xl-11 {
+        width: 91.666666667%;
+    }
+
+    .col-xl-12 {
+        width: 100%;
+    }
+
+    /*
+        xl forms
+    */
+    /*
+        xl tables
+    */
+    /**
+    ## xl elements
+    styles for different blocks and elements on site
+    */
+    /*
+        xl structure
+        styles for main page construction
+    */
+    /*
+        xl other
+    */
+}
+
+@media only screen and (max-width: 499px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+
+}
+
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1259px) {
+
+}

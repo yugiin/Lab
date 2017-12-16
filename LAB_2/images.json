@@ -1,0 +1,77 @@
+{
+	"images":[
+		{
+			"id"  : 0,
+			"url" : "img/germany.jpg",
+			"title" : "Germany",
+			"description" : "Germany, (officially: the Federal Republic of Germany; German: Bundesrepublik Deutschland) is the largest country in Central Europe. It is bordered to the north by Denmark, to the east by Poland and the Czech Republic, to the south by Austria and Switzerland, and to the west by France, Luxembourg, Belgium and the Netherlands.Germany is a federation of 16 states, roughly corresponding to regions with their own distinct and unique cultures. "
+		},
+		{
+			"id"  : 1,
+			"url" : "img/sw.jpg",
+			"title" : "Switzerland",
+			"description" : "Switzerland (/ˈswɪtsərlənd/), officially the Swiss Confederation, is a federal republic in Europe. It consists of 26 cantons, and the city of Bern is the seat of the federal authorities.[1][2][note 1] The country is situated in Western-Central Europe,[note 4] and is bordered by Italy to the south, France to the west, Germany to the north, and Austria and Liechtenstein to the east. Switzerland is a landlocked country geographically divided between the Alps, the Swiss Plateau and the Jura, spanning an area of 41,285 km2 (15,940 sq mi). While the Alps occupy the greater part of the territory, the Swiss population of approximately eight million people is concentrated mostly on the plateau, where the largest cities are to be found: among them are the two global cities and economic centres Zürich and Geneva."
+		},
+		{
+			"id"  : 2,
+			"url" : "img/li.jpg",
+			"title" : "Liechtenstein",
+			"description" : "Liechtenstein (/ˈlɪktənstaɪn/ (About this sound listen); LIK-tən-styne; German: [ˈlɪçtn̩ʃtaɪn]), officially the Principality of Liechtenstein (German: Fürstentum Liechtenstein),[7] is a doubly landlocked German-speaking microstate in Central Europe.[8] The principality is a constitutional monarchy headed by the Prince of Liechtenstein.Liechtenstein is bordered by Switzerland to the west and south and Austria to the east and north. It has an area of just over 160 square kilometres (62 square miles), the fourth-smallest in Europe, and an estimated population of 37,000. Divided into 11 municipalities, its capital is Vaduz and its largest municipality is Schaan."
+		},
+		{
+			"id"  : 3,
+			"url" : "img/aus.jpg",
+			"title" : "Austria",
+			"description" : "Austria (/ˈɒstriə, ˈɔː-/ (About this sound listen);[7][8] German: Österreich [ˈøːstɐˌʁaɪç] (About this sound listen)), officially the Republic of Austria (German: Republik Österreich, About this sound listen (help·info)), is a federal republic and a landlocked country of over 8.7 million people[2] in Central Europe. It is bordered by the Czech Republic and Germany to the north, Hungary and Slovakia to the east, Slovenia and Italy to the south, and Switzerland and Liechtenstein to the west. The territory of Austria covers 83,879 km2 (32,386 sq mi). The terrain is highly mountainous, lying within the Alps; only 32% of the country is below 500 m (1,640 ft), and its highest point is 3,798 m (12,461 ft).[9] The majority of the population speaks local Bavarian dialects of German as their native language,[10] and German in its standard form is the country's official language.[11] Other local official languages are Hungarian, Burgenland Croatian, and Slovene."
+		},
+		{
+			"id"  : 4,
+			"url" : "img/fin.jpg",
+			"title" : "Finland",
+			"description" : "Finland (/ˈfɪnlənd/ (About this sound listen); Finnish: Suomi [suo̯mi] (About this sound listen); Swedish: Finland [ˈfɪnland]), officially the Republic of Finland (Finnish: Suomen tasavalta, Swedish: Republiken Finland),[7] is a sovereign state in Northern Europe. The country has land borders with Sweden to the northwest, Norway to the north, and Russia to the east. Estonia is south of the country across the Gulf of Finland. Finland is a Nordic country situated in the geographical region of Fennoscandia, which also includes Scandinavia. Finland's population is 5.5 million (2016), and the majority of the population is concentrated in the southern region.[8] 88.7% of the population is Finnish and speaks Finnish, a Uralic language unrelated to the Scandinavian languages; the second major group is the Finland-Swedes (5.3%). Finland is the eighth largest country in Europe and the most sparsely populated country in the European Union. It is a parliamentary republic with a central government based in the capital city of Helsinki, local governments in 311 municipalities,[9] and one autonomous region, the Åland Islands. Over 1.4 million people live in the Greater Helsinki metropolitan area, which produces one third of the country's GDP."
+		},
+		{
+			"id"  : 5,
+			"url" : "img/nor.jpg",
+			"title" : "Norway",
+			"description" : "Norway (/ˈnɔːrweɪ/ (About this sound listen) NAWR-way; Norwegian: About this sound Norge (Bokmål) or About this sound Noreg (Nynorsk); Northern Sami: Norga),[10] officially the Kingdom of Norway, is a sovereign state and unitary monarchy whose territory comprises the western portion of the Scandinavian Peninsula plus the remote island of Jan Mayen and the archipelago of Svalbard.[note 1] The Antarctic Peter I Island and the sub-Antarctic Bouvet Island are dependent territories and thus not considered part of the Kingdom. Norway also lays claim to a section of Antarctica known as Queen Maud Land. Until 1814, the kingdom included the Faroe Islands, Greenland, and Iceland. It also included Bohuslän until 1658, Jämtland and Härjedalen until 1645, Shetland and Orkney until 1468, and the Hebrides and Isle of Man until 1266."
+		},
+		{
+			"id"  : 6,
+			"url" : "img/lux.jpg",
+			"title" : "Luxembourg",
+			"description" : "Luxembourg (/ˈlʌksəmbɜːrɡ/ (About this sound listen)) (Luxembourgish: Lëtzebuerg [ˈlətsəbuːə̯ɕ] (About this sound listen); French: Luxembourg, German: Luxemburg), officially the Grand Duchy of Luxembourg,[note 1] is a landlocked country in western Europe. It is bordered by Belgium to the west and north, Germany to the east, and France to the south. Its capital, Luxembourg City, is, together with Brussels and Strasbourg, one of the three official capitals of the European Union[7] and the seat of the European Court of Justice, the highest judicial authority in the EU. Its culture, people and languages are highly intertwined with its neighbours, making it essentially a mixture of French and Germanic cultures. This is emphasised by the three official languages, Luxembourgish, French, and German. The repeated invasions by Germany, especially in World War II, resulted in the country's strong will for mediation between France and Germany and, among other things, led to the foundation of the European Union."
+		},
+		{
+			"id"  : 7,
+			"url" : "img/can.jpg",
+			"title" : "Canada",
+			"description" : "Canada (/ˈkænədə/ (About this sound listen); French: [kanadɑ]) is a country in the northern part of North America. Its ten provinces and three territories extend from the Atlantic to the Pacific and northward into the Arctic Ocean, covering 9.98 million square kilometres (3.85 million square miles), making it the world's second-largest country by total area and the fourth-largest country by land area. Canada's southern border with the United States is the world's longest bi-national land border. The majority of the country has a cold or severely cold winter climate, but southerly areas are warm in summer. Canada is sparsely populated, the majority of its land territory being dominated by forest and tundra and the Rocky Mountains. It is highly urbanized with 82 per cent of the 35.15 million people concentrated in large and medium-sized cities, many near the southern border. Its capital is Ottawa, and its five largest metropolitan areas are Toronto, Montreal, Vancouver, Calgary and Ottawa."
+		},
+		{
+			"id"  : 8,
+			"url" : "img/australia.jpg",
+			"title" : "Australia",
+			"description" : "Australia (/əˈstreɪliə/ (About this sound listen), /ɒ-/, /-ljə/),[10][11] officially the Commonwealth of Australia,[12] is a sovereign country comprising the mainland of the Australian continent, the island of Tasmania and numerous smaller islands. It is the largest country in Oceania and the world's sixth-largest country by total area. The neighbouring countries are Papua New Guinea, Indonesia and East Timor to the north; the Solomon Islands and Vanuatu to the north-east; and New Zealand to the south-east. Australia's capital is Canberra, and its largest urban area is Sydney."
+		},
+		{
+			"id"  : 9,
+			"url" : "img/usa.jpg",
+			"title" : "USA",
+			"description" : "The United States of America (USA), commonly known as the United States (U.S.) or America, is a federal republic[15][16] composed of 50 states, a federal district, five major self-governing territories, and various possessions.[fn 6] At 3.8 million square miles (9.8 million km2)[18] and with over 325 million people, the United States is the world's third- or fourth-largest country by total area[fn 7] and the third-most populous. The capital is Washington, D.C., and the largest city by population is New York City. Forty-eight states and the capital's federal district are contiguous and located in North America between Canada and Mexico. The state of Alaska is in the northwest corner of North America, bordered by Canada to the east and across the Bering Strait from Russia to the west. The state of Hawaii is an archipelago in the mid-Pacific Ocean. The U.S. territories are scattered about the Pacific Ocean and the Caribbean Sea, stretching across nine official time zones. The extremely diverse geography, climate, and wildlife of the United States make it one of the world's 17 megadiverse countries."
+		},
+		{
+			"id"  : 10,
+			"url" : "img/swi.jpg",
+			"title" : "Switzerland",
+			"description" : "Switzerland (/ˈswɪtsərlənd/), officially the Swiss Confederation, is a federal republic in Europe. It consists of 26 cantons, and the city of Bern is the seat of the federal authorities.[1][2][note 1] The country is situated in Western-Central Europe,[note 4] and is bordered by Italy to the south, France to the west, Germany to the north, and Austria and Liechtenstein to the east. Switzerland is a landlocked country geographically divided between the Alps, the Swiss Plateau and the Jura, spanning an area of 41,285 km2 (15,940 sq mi). While the Alps occupy the greater part of the territory, the Swiss population of approximately eight million people is concentrated mostly on the plateau, where the largest cities are to be found: among them are the two global cities and economic centres Zürich and Geneva."
+		},
+		{
+			"id"  : 11,
+			"url" : "img/ja.jpg",
+			"title" : "Japan",
+			"description" : "Japan (Japanese: 日本 Nippon [ɲippoɴ] or Nihon [ɲihoɴ]; formally 日本国 About this sound Nippon-koku or Nihon-koku) is a sovereign island nation in East Asia. Located in the Pacific Ocean, it lies off the eastern coast of the Asian mainland and stretches from the Sea of Okhotsk in the north to the East China Sea and China in the southwest."
+		}
+	]
+	
+}
