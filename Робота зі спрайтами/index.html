@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Робота зi спрайтами</title>
+	<style>
+		*{
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		
+		.clearfix:before,
+		.clearfix:after{
+  			content: "";
+  			display: table;
+		}
+
+		.clearfix:after{
+		  clear: both;
+		}
+		.clearfix{
+		  zoom: 1; /* For IE 6/7 */
+		}
+
+		a{
+			display:inline-block;
+			outline: none;
+		}
+		.container{
+			max-width: 1170px;
+			margin: 0 auto;
+			font: 15px/1em "Arial",sans-serif;
+			color: #0c0c3b;
+			text-align: center;
+		}
+		.list-sprite{
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+		}
+		.list-item{
+			width: 33.333%;
+			float: left;
+		}
+
+
+		.sprite-item,
+		.link-type:before{
+			display: block;
+			margin: 0 auto;
+			width: 100px;
+			height: 90px;
+			background-image: url("sprite.png");
+			background-repeat: no-repeat;
+			cursor: pointer;
+			transition: all 0.3s linear;
+		}
+		
+		.link-type:before{
+			content: "";
+			display: block;
+			margin-bottom: 15px;
+		}
+
+
+		.first,
+		.link-type.first:before{
+			background-position: 0 -95px;
+		}
+		.second,
+		.link-type.second:before{
+			background-position: 9px 0;
+		}
+		.third,
+		.link-type.third:before{
+			background-position: 9px -190px;
+		}
+
+		.first:hover,
+		.link-type.first:hover:before{
+			background-position: -107px -95px;
+		}
+		.second:hover,
+		.link-type.second:hover:before{
+			background-position: -98px 0;
+		}
+		.third:hover,
+		.link-type.third:hover:before{
+			background-position: -98px -190px;
+		}
+		a:link{
+			color:inherit;
+		}
+
+		a:visited{
+			color: #fef210;
+		}
+		a:hover{
+			color:lime;
+		}
+
+		a:active{
+			color:cyan;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2>Sprite based on &lt;DIV&gt; element </h2>
+		<ul class="list-sprite clearfix">
+			<li class="list-item">
+				<div class="sprite-item first">
+					
+				</div>
+				<p>HTML5 logo</p>
+			</li>
+			<li class="list-item">
+				<div class="sprite-item second">
+					
+				</div>
+				<p>React Framework logo</p>
+			</li>
+			<li class="list-item">
+				<div class="sprite-item third">
+					
+				</div>
+				<p>CSS3 logo</p>
+			</li>
+		</ul>
+		<h2>Sprite based on &lt;a&gt;element </h2>
+		<ul class="list-sprite clearfix">
+			<li class="list-item">
+				<a href="/" class="link-type first">
+					HTML5 logo
+				</a>
+				
+			</li>
+			<li class="list-item">
+				<a href="/" class="link-type second">
+					React Framework logo
+				</a>
+			</li>
+			<li class="list-item">
+				<a href="/" class="link-type third">
+					CSS3 logo
+				</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
